@@ -1,0 +1,71 @@
+{% load static %}
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="modalAddLinkSpace" tabindex="-1" role="dialog" 
+    aria-labelledby="addFriend" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-remove-friend">
+
+      <div class="modal-header" style="border: none">
+        <h5 class="modal-title">
+            Adicionar novo link em - <span id="currentSpaceNameModal"></span>
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    
+      <div class="modal-body" id="modal-body-friendship">
+        <form class="col-md-12 info" id="form-request-friendship">
+            
+            <div class="box">
+
+                <div style="display: flex;">
+                    <div style="display: flex; flex-direction:column; width: 49%; margin-right: 2%">
+                        <label>Título</label>
+                        <div class="box-input">
+                            <div class="text-center"  style="padding: 10px;">
+                                <i class="fas fa-signature"></i>
+                            </div>
+                            <input id="link-title-space" autocomplete="off" type="text">
+                        </div>
+                    </div>
+
+                    
+                    <div style="display: flex; flex-direction:column; width: 49%;">
+                        <label>URL/Link</label>
+                        <div class="box-input">
+                            <div class="text-center"  style="padding: 10px;">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <input id="link-url-space" autocomplete="off" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction:column; width: 100%;">
+                    <label>Descrição</label>
+                    <div class="box-input">
+                        <div class="text-center" style="padding: 10px;">
+                            <i class="fas fa-align-left"></i>
+                        </div>
+                        <input id="link-description-space" autocomplete="off" type="text" style="width: 100%">
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </form>
+      </div>
+    
+      <div class="modal-footer info" style="border: none">
+        <button type="button" class="btn" data-dismiss="modal">Cancelar</button>
+        <button type="button" onClick="addNewLinkSpace()"
+          class="btn btn-add-friend">
+          Adicionar
+        </button>
+      </div>
+    
+    </div>
+  </div>
+</div>

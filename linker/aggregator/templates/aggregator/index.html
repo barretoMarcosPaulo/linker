@@ -1,0 +1,39 @@
+{% extends 'base_app.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+    
+    <!-- {% include "./components/header.html" %} -->
+
+    <div class="row-elements col-md-12">
+      
+      {% include "./components/options-list.html" %}
+      {% include "./components/menu-list.html" %}
+      {% include "./components/main.html" %}
+
+
+
+      {% include "./components/modal-remove-friendship.html" %}
+      {% include "./components/modal-add-friend.html" %}
+      {% include "./components/modal-remove-workspace.html" %}
+      {% include "./components/modal-add-workspace.html" %}
+      {% include "./components/modal-add-tag.html" %}
+      {% include "./components/modal-add-link.html" %}
+      {% include "./components/modal-read-link.html" %}
+      {% include "./components/moda-share-link.html" %}
+      {% include "./components/modal-notifications.html" %}
+      {% include "./components/modal-add-link-space.html" %}
+    
+
+      
+    </div>
+
+
+    {% block extra_scrypts %}
+    
+
+    {% endblock %}
+
+{% endblock %}

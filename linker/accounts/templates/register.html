@@ -1,0 +1,82 @@
+{% extends 'base_website.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'website:homepage' %}">Linker</a>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="form-register form" class="col-md-5 mx-auto">
+            
+          <h1 class="title-form">Olá, seja bem-vindo(a)!</h1>
+          <p class="subtitle-form">Crie uma nova conta e comece a usar!</p>
+
+          {% if form.errors %}
+              <div class="alert alert-danger" style="width:92%">
+                <ol style="text-align:left">
+                  {% for field in form %}
+                      {% for error in field.errors %}
+                              <li>
+                                <strong>{{ error|escape }}</strong>
+                              </li>
+                      {% endfor %}
+                  {% endfor %}
+                </ol>
+              
+              </div>
+
+              {% for error in form.non_field_errors %}
+                  <div class="alert alert-danger">
+                      <strong>{{ error|escape }}</strong>
+                  </div>
+              {% endfor %}
+          {% endif %}
+
+          <form method="post" class="" autocomplete="off"> {% csrf_token %}
+
+            <div class="box-input">
+              <label>Nome *</label>
+              <input autocomplete="false" required autofocus type="text" name="full_name">
+            </div>
+
+            <div class="box-input">
+              <label>Nome de usuário *</label>
+              <input autocomplete="false"  type="text" name="username">
+            </div>
+            <div class="box-input">
+              <label>E-mail *</label>
+              <input autocomplete="false" type="email" name="email">
+            </div>
+
+            <div style="display:flex; width:100%;">
+              <div class="box-input-2" style="margin-right: 4%;">
+                <label>Senha *</label>
+                <input required type="password" name="password1">
+              </div>
+
+              <div class="box-input-2">
+                <label>Repetir Senha *</label>
+                <input required type="password" name="password2">
+              </div>
+          </div>
+
+            <button type="submit" class="btn-form">
+              Cadastrar
+            </button>
+       
+            <label > Já possui conta ? 
+              <a class="forget-pass" href="{% url 'accounts:login' %}"> Entrar</a>
+            </label>
+          </form>
+            
+        </div>
+    </header>
+
+{% endblock %}

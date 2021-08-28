@@ -1,0 +1,38 @@
+{% load static %}
+
+<div id="nav-options-select">
+	
+	<div 
+		class="card-option-select selected" 
+		onClick="selectItem(this)"
+		data-option="friends"
+	>
+		<i class="fas fa-users"></i>
+	</div>
+	
+	<div 
+		class="card-option-select" 
+		onClick="selectItem(this)"
+		data-option="workspaces"
+	>
+		<i class="fab fa-weebly"></i>
+	</div>
+
+	<div class="boxBtnsBottom">
+
+		<div style="margin-bottom: 1.5em">
+			<a class="btnBottom btnNotification" onClick="showNotificationModal()">
+				<div id="count-notifications">
+					0
+				</div>
+				<i class="far fa-bell"></i>
+			</a>
+		</div>
+	
+		<a class="btnConfig" href="{% url 'accounts:logout' %}" title="Sair do sistema">
+			<i class="fas fa-sign-out-alt"></i>
+		</a>
+
+	</div>
+
+</div>  

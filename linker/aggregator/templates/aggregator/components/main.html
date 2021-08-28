@@ -1,0 +1,57 @@
+<div id="content">
+
+    <div id="form-search">
+        <form>
+            <i class="fas fa-search"></i>
+            <input type="text" id="input_search" placeholder="Buscar por link" onkeyup="searchLink(this)">
+        </form>
+    </div>
+    
+    <div id="tags-list">
+        <a title="Adicionar nova tag" onclick="addTagModal()">
+            <i class="fas fa-plus-circle"></i>
+        </a>
+        
+        <div id="tags-content">
+        </div>
+    </div>
+    
+    
+    <div id="links-list-content">
+
+
+    </div>
+    
+    <button class="button-add-link btn" onclick="addLinkModal()">
+        <i class="fas fa-plus"></i>
+    </button>
+
+
+</div>
+
+<div id="content-spaces" style="display:none">
+
+    <div style="display: flex; flex-direction: row; align-items: center">
+        
+        <h4 id="current-space" style="color: white; margin-left: 3%; margin-right: 3%% ;  margin-top:2%">
+        </h4>
+
+        <div id="tags-content-space" style="margin-top: 2%; margin-left: 3%">
+        </div>
+
+    </div>
+
+    
+    
+    <div id="links-list-content-space">
+
+
+    </div>
+    
+    <button class="button-add-link btn" id="btnAddSpaceModal" onclick="addLinkSpaceModal(this)">
+        <i class="fas fa-plus"></i>
+    </button>
+
+
+</div>
+

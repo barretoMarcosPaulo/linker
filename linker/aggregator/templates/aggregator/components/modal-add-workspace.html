@@ -1,0 +1,78 @@
+{% load static %}
+<!-- Modal -->
+<div class="modal fade" id="addWorkspace" tabindex="-1" role="dialog" 
+    aria-labelledby="addFriend" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-remove-friend">
+
+      <div class="modal-header" style="border: none">
+        <h5 class="modal-title">
+            Adicionar novo workspace
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+      <div class="modal-body" id="modal-body-friendship">
+        <form class="col-md-12 info" id="form-request-friendship">
+            
+            <div class="box">
+                <label>Nome do WorkSpace:</label>
+                <div class="box-input">
+                    <div class="text-center" style="padding: 10px;">
+                        <i class="fas fa-cube"></i>
+                    </div>
+
+                    <input id="new-workspace" autocomplete="off" type="text" autofocus>
+                </div>
+            </div>
+
+            <div class="box">
+              <label>Membros:</label>
+                <div class="box-input">
+                    <div class="text-center" style="padding: 10px;">
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <input id="friend-selected-space" autocomplete="off" type="text" onkeyup="searchUser(this, true)">
+                </div>
+            </div>
+            
+            <div id="autocomplete-list-space"></div>
+            <div id="list-friends-space">
+            
+
+            </div>
+
+        </form>
+      </div>
+
+      {% comment %} <div class="modal-body" id="modal-body-friendship">
+        <form class="col-md-12 info" id="form-request-friendship">
+            
+            <div class="box">
+                <div class="box-input">
+                    <div class="text-center" style="padding: 10px;">
+                        <i class="fas fa-cube"></i>
+                    </div>
+
+                    <input id="new-workspace" autocomplete="off" type="text">
+                </div>
+            </div>
+            
+        </form>
+      </div> {% endcomment %}
+    
+      <div class="modal-footer info" id="modal-footer-friendship" style="border: none">
+        <button type="button" class="btn" data-dismiss="modal">Cancelar</button>
+        <button type="button" onClick="addNewWorkspace()"
+          class="btn btn-add-friend">
+          Adicionar
+        </button>
+      </div>
+    
+    </div>
+  </div>
+</div>

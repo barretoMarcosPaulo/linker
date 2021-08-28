@@ -1,0 +1,43 @@
+{% load static %}
+<!-- Modal -->
+<div class="modal fade" id="addTag" tabindex="-1" role="dialog" 
+    aria-labelledby="addFriend" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-remove-friend">
+
+      <div class="modal-header" style="border: none">
+        <h5 class="modal-title">
+            Adicionar nova tag
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    
+      <div class="modal-body" id="modal-body-friendship">
+        <form class="col-md-12 info" id="form-request-friendship">
+            
+            <div class="box">
+                <div class="box-input">
+                    <div class="text-center" style="padding: 10px;">
+                        <i class="fas fa-cube"></i>
+                    </div>
+
+                    <input id="new-tag" autocomplete="off" type="text">
+                </div>
+            </div>
+            
+        </form>
+      </div>
+    
+      <div class="modal-footer info" style="border: none">
+        <button type="button" class="btn" data-dismiss="modal">Cancelar</button>
+        <button type="button" onClick="addNewTag()"
+          class="btn btn-add-friend">
+          Adicionar
+        </button>
+      </div>
+    
+    </div>
+  </div>
+</div>

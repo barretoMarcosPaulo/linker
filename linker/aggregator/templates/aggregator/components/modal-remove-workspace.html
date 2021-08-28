@@ -1,0 +1,34 @@
+{% load static %}
+<!-- Modal -->
+<div class="modal fade" id="removeSpace" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-remove-friend">
+
+      <div class="modal-header" style="border: none">
+        <h5 class="modal-title">
+            Remover workspace  
+            <strong id="workspace-name"></strong> ?
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    
+      <div class="modal-body">
+        <p>
+            Os links desse workspace não serão perdidos. 
+            Iremos criar a Tag <span id="workspace-name2"></span> para realocar os links compartilhados.
+        </p>
+      </div>
+    
+      <div class="modal-footer" style="border: none">
+        <button type="button" class="btn" data-dismiss="modal">Cancelar</button>
+        <button type="button" id="btnRemoveSpace"
+          class="btn btn-remove-friend" onclick="removeSpace(this)">
+          Remover
+        </button>
+      </div>
+    
+    </div>
+  </div>
+</div>

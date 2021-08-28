@@ -1,0 +1,49 @@
+{% load static %}
+<!-- Modal -->
+<div class="modal fade" id="shareLink" tabindex="-1" role="dialog" 
+    aria-labelledby="addFriend" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-remove-friend">
+
+      <div class="modal-header" style="border: none">
+        <h5 class="modal-title">
+            Compartilhar com amigos
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    
+      <div class="modal-body" id="modal-body-friendship">
+        <form class="col-md-12 info" id="form-request-friendship">
+            
+            <div class="box">
+                <div class="box-input">
+                    <div class="text-center" style="padding: 10px;">
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <input id="friend-selected" autocomplete="off" type="text" onkeyup="searchUser(this, true)">
+                </div>
+            </div>
+            
+            <div id="autocomplete-list-friend"></div>
+            <div id="list-friends">
+            
+
+            </div>
+
+        </form>
+      </div>
+    
+      <div class="modal-footer info" id="modal-footer-friendship" style="border: none">
+        <button type="button" class="btn" data-dismiss="modal">Cancelar</button>
+        <button type="button" id="btn-share" onClick="shareLinkForFriends(this)"
+          class="btn btn-add-friend">
+          Compartilhar
+        </button>
+      </div>
+    
+    </div>
+  </div>
+</div>
