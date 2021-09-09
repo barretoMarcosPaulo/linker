@@ -145,7 +145,7 @@ if env.get("DEBUG"):
     STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 else:
-    STATIC_ROOT = '/root/apps/linker/static/'
+    STATIC_ROOT = '/developer/apps/linker/static/'
     STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'

@@ -8,6 +8,7 @@ django-environ==0.4.5
 django-extensions==3.1.1
 django-models-logging==1.0.6
 django-widget-tweaks==1.4.8
+gunicorn==20.0.4
 idna==2.10
 ndg-httpsclient==0.5.1
 psycopg2-binary==2.8.6
