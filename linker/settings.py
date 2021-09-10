@@ -81,18 +81,6 @@ DATABASES = {
     }
 }
 
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'linkerdb',
-#         'USER': 'admin',
-#         'PASSWORD': 'admin@556637',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -140,7 +128,6 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-
 if env.get("DEBUG"):
     STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -154,6 +141,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates/static'),
 ]
+
+if not env.get("DEBUG"):
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
 
 LOGGING = {
     "version": 1,

@@ -25,4 +25,3 @@ __pypackages__/
 .venv
 env/
 .idea/
-static/
