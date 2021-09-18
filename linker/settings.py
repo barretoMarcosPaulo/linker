@@ -76,11 +76,14 @@ WSGI_APPLICATION = 'linker.wsgi.application'
 # Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env.get('DATABASE_NAME'),
+        'HOST': env.get('DATABASE_HOST'),
+        'USER': env.get('DATABASE_USER'),
+        'PASSWORD': env.get('DATABASE_PASSWORD'),
+        'PORT': int(env.get('DATABASE_PORT'))
     }
 }
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
